@@ -140,11 +140,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ClassRoomController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404300323131_init.cs" />
+    <Compile Include="Migrations\202404300323131_init.designer.cs">
+      <DependentUpon>202404300323131_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClasseRoom.cs" />
     <Compile Include="Models\ConnectDB.cs" />
     <Compile Include="Models\Course.cs" />
@@ -169,6 +177,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\MyDesign\RoomStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -203,7 +212,34 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Student\FirstPage.cshtml" />
+    <Content Include="Views\Student\Students.cshtml" />
+    <Content Include="Views\Course\Courses.cshtml" />
+    <Content Include="Views\Course\DetailsCourse.cshtml" />
+    <Content Include="Views\Student\DetailsStudent.cshtml" />
+    <Content Include="Views\Teacher\Teachers.cshtml" />
+    <Content Include="Views\Teacher\DetailsTeacher.cshtml" />
+    <Content Include="Views\ClassRoom\ClassRooms.cshtml" />
+    <Content Include="Views\ClassRoom\DetailsClassRoom.cshtml" />
+    <Content Include="Views\ClassRoom\Index.cshtml" />
+    <Content Include="Views\ClassRoom\GetClasseRoom.cshtml" />
+    <Content Include="Views\ClassRoom\InsertClasseRoom.cshtml" />
+    <Content Include="Views\ClassRoom\DeleteClasseRoom.cshtml" />
+    <Content Include="Views\ClassRoom\EditClasseRoom.cshtml" />
+    <Content Include="Views\Course\GetCourses.cshtml" />
+    <Content Include="Views\Course\GetCourse.cshtml" />
+    <Content Include="Views\Course\InsertCourse.cshtml" />
+    <Content Include="Views\Course\DeleteCourse.cshtml" />
+    <Content Include="Views\Course\EditCourse.cshtml" />
+    <Content Include="Views\Student\GetStudents.cshtml" />
+    <Content Include="Views\Student\GetStudent.cshtml" />
+    <Content Include="Views\Student\InsertStudent.cshtml" />
+    <Content Include="Views\Student\DeleteStudent.cshtml" />
+    <Content Include="Views\Student\EditStudent.cshtml" />
+    <Content Include="Views\Teacher\GetTeachers.cshtml" />
+    <Content Include="Views\Teacher\GetTeacher.cshtml" />
+    <Content Include="Views\Teacher\InsertTeacher.cshtml" />
+    <Content Include="Views\Teacher\DeleteTeacher.cshtml" />
+    <Content Include="Views\Teacher\EditTeacher.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -234,6 +270,11 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202404300323131_init.resx">
+      <DependentUpon>202404300323131_init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
