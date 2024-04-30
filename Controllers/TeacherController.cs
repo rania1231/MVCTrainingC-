@@ -16,7 +16,7 @@ namespace MVC_Full_Training.Controllers
             List<Teacher> teachers = new List<Teacher>();
             teachers = (from obj in conection.teachers select obj).ToList();
 
-            return View();
+            return View(teachers);
         }
 
         public ActionResult GetTeacher(int id)
@@ -54,7 +54,7 @@ namespace MVC_Full_Training.Controllers
             teacher = (from obj in conection.teachers where obj.teacherID == id select obj).FirstOrDefault();
             conection.teachers.Remove(teacher); // supprimer course from dataset teachers
             conection.SaveChanges();  // update table teacher
-            return View(); // Affichage de la Vue teachers
+            return RedirectToAction("GetTeachers"); // Affichage de la Vue teachers
         }
 
         public ActionResult EditTeacher(int id)
