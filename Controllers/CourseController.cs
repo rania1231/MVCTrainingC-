@@ -16,14 +16,14 @@ namespace MVC_Full_Training.Controllers
             List<Course> courses= new List<Course>();
             courses= (from obj in conection.courses select obj).ToList();
 
-            return View("Courses");
+            return View();
         }
 
         public ActionResult GetCourse(int id)
         {
             Course course = new Course();
             course= (from obj in conection.courses where obj.courseID==id select obj).FirstOrDefault() ;
-            return View("DetailsCourse");
+            return View();
         }
 
         public ActionResult InsertCourse()
@@ -34,7 +34,7 @@ namespace MVC_Full_Training.Controllers
 
             conection.courses.Add(course);
             conection.SaveChanges();
-            return View("Courses");
+            return View();
         }
 
         public ActionResult DeleteCourse(int id)
@@ -43,7 +43,7 @@ namespace MVC_Full_Training.Controllers
             course = (from obj in conection.courses where obj.courseID == id select obj).FirstOrDefault();
             conection.courses.Remove(course); // supprimer course from dataset courses
             conection.SaveChanges();  // update table Course
-            return View("Courses"); // Affichage de la Vur Courses
+            return View(); // Affichage de la Vur Courses
         }
 
         public ActionResult EditCourse(int id)
@@ -53,7 +53,7 @@ namespace MVC_Full_Training.Controllers
             course.isAvailable = false;
             course.courseName = "Math2";
             conection.SaveChanges();//update database
-            return View("Courses");
+            return View();
         }
     }
 }

@@ -21,7 +21,10 @@
                     <li>@Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("À propos de", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("FirstPage", "FirstPage", "Student", new { area = ""}, new {@class ="nav-link"})</li>
+                    <li>@Html.ActionLink("Students", "GetStudents", "Student", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("ClassRooms", "Index", "ClassRoom", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Courses", "GetCourses", "Course", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Teachers", "GetTeachers", "Teacher", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
         </div>
@@ -30,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mon application ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - MVC Project Training</p>
         </footer>
     </div>
 

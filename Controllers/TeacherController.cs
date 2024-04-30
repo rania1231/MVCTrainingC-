@@ -16,14 +16,14 @@ namespace MVC_Full_Training.Controllers
             List<Teacher> teachers = new List<Teacher>();
             teachers = (from obj in conection.teachers select obj).ToList();
 
-            return View("Teachers");
+            return View();
         }
 
         public ActionResult GetTeacher(int id)
         {
             Teacher teacher = new Teacher();
             teacher = (from obj in conection.teachers where obj.teacherID == id select obj).FirstOrDefault();
-            return View("DetailsTeacher");
+            return View();
         }
 
         public ActionResult InsertTeacher()
@@ -35,7 +35,7 @@ namespace MVC_Full_Training.Controllers
 
             conection.teachers.Add(teacher);
             conection.SaveChanges();
-            return View("Teachers");
+            return View();
         }
 
         public ActionResult DeleteTeacher(int id)
@@ -44,7 +44,7 @@ namespace MVC_Full_Training.Controllers
             teacher = (from obj in conection.teachers where obj.teacherID == id select obj).FirstOrDefault();
             conection.teachers.Remove(teacher); // supprimer course from dataset teachers
             conection.SaveChanges();  // update table teacher
-            return View("Teachers"); // Affichage de la Vue teachers
+            return View(); // Affichage de la Vue teachers
         }
 
         public ActionResult EditTeacher(int id)
@@ -54,7 +54,7 @@ namespace MVC_Full_Training.Controllers
             teacher.teacherNo = 2;
             teacher.teacherName = "Mounir";
             conection.SaveChanges();//update database
-            return View("Teachers");
+            return View();
         }
     }
 }
