@@ -10,10 +10,10 @@ namespace MVC_Full_Training.Models
     {
         public ConnectDB() :base("TestConnectionString")
         { }
-        DbSet<ClasseRoom> classeRooms { get; set; }
-        DbSet<Course> courses { get; set; }
-        DbSet<Student> students { get; set; }
-        DbSet<Teacher> teachers { get; set; }
+        public DbSet<ClasseRoom> classeRooms { get; set; }
+        public DbSet<Course> courses { get; set; }
+        public DbSet<Student> students { get; set; }
+        public DbSet<Teacher> teachers { get; set; }
 
     }
 }
