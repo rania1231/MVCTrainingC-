@@ -1,0 +1,14 @@
+﻿input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.button {
+    transition-duration: 0.4s;
+}
+
+    .button:hover {
+        background-color: #04AA6D; /* Green */
+        color: white;
+    }

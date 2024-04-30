@@ -26,17 +26,27 @@ namespace MVC_Full_Training.Controllers
             return View();
         }
 
+
+       [HttpGet]
         public ActionResult InsertTeacher()
         {
-            Teacher teacher = new Teacher();
-            teacher.teacherNo = 2;
-            teacher.teacherName = "Monia";
+            //Teacher teacher = new Teacher();
+            //teacher.teacherNo = 2;
+            //teacher.teacherName = "Monia";
 
 
-            conection.teachers.Add(teacher);
-            conection.SaveChanges();
+            //conection.teachers.Add(teacher);
+           // conection.SaveChanges();
             return View();
         }
+        [HttpPost]
+        public ActionResult InsertTeacher(Teacher teacher)
+        {
+            conection.teachers.Add(teacher);
+            conection.SaveChanges();
+            return RedirectToAction("GetTeachers");
+        }
+
 
         public ActionResult DeleteTeacher(int id)
         {

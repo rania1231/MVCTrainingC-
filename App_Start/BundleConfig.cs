@@ -26,8 +26,10 @@ namespace MVC_Full_Training
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
             bundles.Add(new StyleBundle("~/MyDesign").Include(
-                        "~/Content/MyDesign/RoomStyle.css"
+                        "~/Content/MyDesign/RoomStyle.css",
+                        "~/Content/MyDesign/MainStyle.css"
                 ));
+            
         }
     }
 }
