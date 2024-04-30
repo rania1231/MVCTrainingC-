@@ -97,3 +97,5 @@ C:\Users\HP\source\repos\MVC Full Training\bin\EntityFramework.dll
 C:\Users\HP\source\repos\MVC Full Training\bin\EntityFramework.SqlServer.dll
 C:\Users\HP\source\repos\MVC Full Training\bin\EntityFramework.xml
 C:\Users\HP\source\repos\MVC Full Training\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\source\repos\MVC Full Training\obj\Debug\MVC_Full_Training.Migrations.init.resources
+C:\Users\HP\source\repos\MVC Full Training\obj\Debug\MVC Full Training.csproj.GenerateResource.cache
